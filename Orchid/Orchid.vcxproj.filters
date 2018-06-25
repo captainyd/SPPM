@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="3rdParty\loadPng">
+      <UniqueIdentifier>{f2196c72-5fda-425b-8a36-7307a1023191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="camera">
+      <UniqueIdentifier>{9acf2d3c-0828-463d-b852-d6ed663b7a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{0cb02d3e-8e00-4912-9714-d0a8f4c26067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="material">
+      <UniqueIdentifier>{c02661a2-975a-4971-8b72-6a89d830912f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{8c649cee-8464-49da-82e6-a323cb62a476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects">
+      <UniqueIdentifier>{4f7e5e04-5996-4eb6-a39c-7f99c7b076d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ray">
+      <UniqueIdentifier>{3d434020-f3ab-46e6-98da-ff1106ad42a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderer">
+      <UniqueIdentifier>{5abd7a13-6e34-4f08-af71-9baba96a429b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{4e8bd521-d79c-48bd-8804-9dceb8ac6b21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="sampler">
+      <UniqueIdentifier>{b9ac09d8-8fdf-4cfd-a9e3-29110bf45b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="accel">
+      <UniqueIdentifier>{0c697dec-9db6-4479-8191-1825ed0e7937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="grid">
+      <UniqueIdentifier>{ba16c483-e202-4c6a-96a0-36a2ca2df224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="visiblePoint">
+      <UniqueIdentifier>{306c039b-864a-4e23-99df-1bfc787d2057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="seed">
+      <UniqueIdentifier>{1bd13043-2f5e-423b-83df-cc82b6d985f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{d8fd1935-c217-4418-b68d-819e09608666}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3rdParty\loadpng\lodepng.cpp">
+      <Filter>3rdParty\loadPng</Filter>
+    </ClCompile>
+    <ClCompile Include="camera\camera.cpp">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="material\material.cpp">
+      <Filter>material</Filter>
+    </ClCompile>
+    <ClCompile Include="material\texture.cpp">
+      <Filter>material</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\objetcs.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\quad.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ray\ray.cpp">
+      <Filter>ray</Filter>
+    </ClCompile>
+    <ClCompile Include="render\renderer.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="scene\scene.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="test\main.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\sphere.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\triangle.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\tiny_obj_loader\tiny_obj_loader.cc">
+      <Filter>3rdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\mesh.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="grid.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="visiblePoint.cpp">
+      <Filter>visiblePoint</Filter>
+    </ClCompile>
+    <ClCompile Include="source.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdParty\loadpng\lodepng.h">
+      <Filter>3rdParty\loadPng</Filter>
+    </ClInclude>
+    <ClInclude Include="camera\camera.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="core\common.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="material\material.h">
+      <Filter>material</Filter>
+    </ClInclude>
+    <ClInclude Include="material\texture.h">
+      <Filter>material</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vector3d.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\objetcs.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\quad.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\sphere.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\triangle.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="render\renderer.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="scene\scene.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ray\ray.h">
+      <Filter>ray</Filter>
+    </ClInclude>
+    <ClInclude Include="sample\sampler.h">
+      <Filter>sampler</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\shape.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\mesh.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="accel\aabbox.h">
+      <Filter>accel</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\tiny_obj_loader\tiny_obj_loader.h">
+      <Filter>3rdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="grid.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="visiblePoint.h">
+      <Filter>visiblePoint</Filter>
+    </ClInclude>
+    <ClInclude Include="seed.h">
+      <Filter>seed</Filter>
+    </ClInclude>
+    <ClInclude Include="source.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
