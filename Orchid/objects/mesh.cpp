@@ -103,6 +103,7 @@ namespace Orchid
 		// Clean up
 		m_shapes.clear();
 		m_materials.clear();
+		node = KDNode().build(tris, 0);
 		printf("\n");
 	}
 	ObjectIntersection Mesh::getIntersection(const Ray & r)
@@ -110,8 +111,9 @@ namespace Orchid
 		double t = 0, tmin = INFINITY;
 		Vector3d normal = Vector3d();
 		Vector3d colour = Vector3d();
-	
-		return ObjectIntersection(false, tmin, normal, Material(DIFF, colour, Vector3d()));
+		bool hit = node->hit(node, r, t, tmin, normal, colour);
+		//return ObjectIntersection(hit, tmin, normal, Material(DIFF, colour, Vector3d()));
+		return ObjectIntersection(hit, tmin, normal, Material(REFR, colour, Vector3d()));
 
 	}
 }

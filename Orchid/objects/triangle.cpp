@@ -11,7 +11,7 @@ namespace Orchid
 		_p0 = p0;
 		_p1 = p1;
 		_p2 = p2;
-		_material = material;
+		*_material = material;
 	}
 	Triangle::Triangle(const Triangle & tri)
 	{

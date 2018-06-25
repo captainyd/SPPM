@@ -4,6 +4,7 @@
 #include "objetcs.h"
 #include "triangle.h"
 #include "../3rdParty/tiny_obj_loader/tiny_obj_loader.h"
+#include "../accel/kdtree.h"
 
 namespace Orchid
 {
@@ -17,6 +18,7 @@ namespace Orchid
 		std::vector<Triangle*> tris;
 		Material m_m;	// Material
 		Vector3d _p;//position
+		KDNode *node;
 
 	public:
 		Mesh(Vector3d p_, const char* file_path, Material m_);

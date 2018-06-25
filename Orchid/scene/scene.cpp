@@ -128,10 +128,23 @@ namespace Orchid
 
 				trace_source_ray(Ray(hit_point, direction), grid, phi_table, beta, depth, M_table);
 			}
-			else // SPEC
+			if (type == SPEC)
 			{
 				Vector3d direction = normal.reflect(ray.direction(), normal);
 				trace_source_ray(Ray(hit_point, direction), grid, phi_table, beta, depth, M_table);
+			}
+			else // REFRs
+			{
+				Vector3d nl = normal.dot(ray.direction()) < 0 ? normal : normal*-1;
+				Ray reflRay(ray.origin(), ray.direction() - normal * 2 * normal.dot(ray.direction()));
+				bool into = normal.dot(nl)>0;
+				double nc = 1, nt = 1.5;
+				double nnt = into ? nc / nt : nt / nc;
+				double ddn = ray.direction().dot(nl), cos2t;
+				if ((cos2t = 1 - nnt*nnt*(1 - ddn*ddn))<0)
+					trace_source_ray(reflRay, grid, phi_table, beta, depth, M_table);
+				Vector3d tdir = (ray.direction()*nnt - normal*((into ? 1 : -1)*(ddn*nnt + sqrt(cos2t)))).normalized();
+				trace_source_ray(Ray(ray.origin(), tdir), grid, phi_table, beta, depth, M_table);
 			}
 		}
 	}

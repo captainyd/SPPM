@@ -15,89 +15,103 @@ int main(int argc, char *argv[])
 	if (argc == 2) samples = atoi(argv[1]);
 	Camera camera = Camera
 	(
-		Vector3d(278.0f, 273.0f, -800.0f),
-		Vector3d(278.0f, 273.0f, 0.0f),
-		Vector3d(0, 1, 0),
+		Vector3d(0.50f, 5.0f, 0.75f),
+		Vector3d(0.5f, 0.0f, 0.75f),
+		Vector3d(0, 0, 1),
 		300, 300,
 		0.1,
 		40
 	);     // Create camera
 
 	Scene scene = Scene();
-	scene.add
-	(
-		dynamic_cast<Object*>
-		(
-			new Quad
-			(
-	{ 552.8f, 0.0f, 0.0f },
-	{ 0.0f, 0.0f,   0.0f },
-	{ 0.0f, 0.0f, 559.2f },
-	{ 549.6f, 0.0f, 559.2f },
-				Material(DIFF, { 1.0f, 1.0f, 1.0f })
-			)
-			)
-	);
-	scene.add
-	(
-		dynamic_cast<Object*>
-		(
-			new Quad
-			(
-	{ 213.0f, 548.6f, 227.0f }, { 343.0f, 548.6f, 227.0f }, { 343.0f, 548.6f, 332.0f }, { 213.0f, 548.6f, 332.0f },
-				Material(EMIT, { 1.0f, 1.0f, 1.0f }, { 25.0f, 25.0f, 25.0f })
-			)
-			)
-	);
-	scene.add
-	(
-		dynamic_cast<Object*>
-		(
-			new Quad
-			(
-	{ 556.0f, 548.8f,   0.0f }, { 556.0f, 548.8f, 559.2f }, { 0.0f, 548.8f, 559.2f }, { 0.0f, 548.8f,   0.0f },
-				Material(DIFF, { 1.0f, 1.0f, 1.0f })
-			)
-			)
-	);
-	scene.add
-	(
-		dynamic_cast<Object*>
-		(
-			new Quad
-			(
-	{ 549.6f,   0.0f, 559.2f }, { 0.0f,   0.0f, 559.2f }, { 0.0f, 548.8f, 559.2f }, { 556.0f, 548.8f, 559.2f },
-				Material(DIFF, { 1.0f, 1.0f, 1.0f })
-			)
-			)
-	);
-	scene.add
-	(
-		dynamic_cast<Object*>
-		(
-			new Quad(
-	{ 0.0f,   0.0f, 559.2f }, { 0.0f,   0.0f,   0.0f }, { 0.0f, 548.8f,   0.0f }, { 0.0f, 548.8f, 559.2f },
-				Material(DIFF, { 0.0f, 1.0f, 0.0f })
-			)
-			)
-	);
-	scene.add
-	(
-		dynamic_cast<Object*>
-		(
-			new Quad
-			(
-	{ 552.8f,   0.0f,   0.0f }, { 549.6f,   0.0f, 559.2f }, { 556.0f, 548.8f, 559.2f }, { 556.0f, 548.8f,   0.0f },
-				Material(DIFF, { 1.0f, 0.0f, 0.0f })
-			)
-			)
-	);
-	scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(278.0f, 273.0f, 273.0f),
-		90, Material(SPEC, Vector3d(1, 1, 0)))));
+	//scene.add
+	//(
+	//	dynamic_cast<Object*>
+	//	(
+	//		new Quad
+	//		(
+	//{ 552.8f, 0.0f, 0.0f },
+	//{ 0.0f, 0.0f,   0.0f },
+	//{ 0.0f, 0.0f, 559.2f },
+	//{ 549.6f, 0.0f, 559.2f },
+	//			Material(DIFF, { 1.0f, 1.0f, 1.0f })
+	//		)
+	//		)
+	//);
+	//scene.add
+	//(
+	//	dynamic_cast<Object*>
+	//	(
+	//		new Quad
+	//		(
+	//{ 213.0f, 548.6f, 227.0f }, { 343.0f, 548.6f, 227.0f }, { 343.0f, 548.6f, 332.0f }, { 213.0f, 548.6f, 332.0f },
+	//			Material(EMIT, { 1.0f, 1.0f, 1.0f }, { 25.0f, 25.0f, 25.0f })
+	//		)
+	//		)
+	//);
+	//scene.add
+	//(
+	//	dynamic_cast<Object*>
+	//	(
+	//		new Quad
+	//		(
+	//{ 556.0f, 548.8f,   0.0f }, { 556.0f, 548.8f, 559.2f }, { 0.0f, 548.8f, 559.2f }, { 0.0f, 548.8f,   0.0f },
+	//			Material(DIFF, { 1.0f, 1.0f, 1.0f })
+	//		)
+	//		)
+	//);
+	//scene.add
+	//(
+	//	dynamic_cast<Object*>
+	//	(
+	//		new Quad
+	//		(
+	//{ 549.6f,   0.0f, 559.2f }, { 0.0f,   0.0f, 559.2f }, { 0.0f, 548.8f, 559.2f }, { 556.0f, 548.8f, 559.2f },
+	//			Material(DIFF, { 1.0f, 1.0f, 1.0f })
+	//		)
+	//		)
+	//);
+	//scene.add
+	//(
+	//	dynamic_cast<Object*>
+	//	(
+	//		new Quad(
+	//{ 0.0f,   0.0f, 559.2f }, { 0.0f,   0.0f,   0.0f }, { 0.0f, 548.8f,   0.0f }, { 0.0f, 548.8f, 559.2f },
+	//			Material(DIFF, { 0.0f, 1.0f, 0.0f })
+	//		)
+	//		)
+	//);
+	//scene.add
+	//(
+	//	dynamic_cast<Object*>
+	//	(
+	//		new Quad
+	//		(
+	//{ 552.8f,   0.0f,   0.0f }, { 549.6f,   0.0f, 559.2f }, { 556.0f, 548.8f, 559.2f }, { 556.0f, 548.8f,   0.0f },
+	//			Material(DIFF, { 1.0f, 0.0f, 0.0f })
+	//		)
+	//		)
+	//);
+	//scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(278.0f, 273.0f, 273.0f),
+	//	90, Material(SPEC, Vector3d(1, 1, 0)))));
 
-	/*scene.add(dynamic_cast<Object*>(new Triangle(Vector3d(278.0f, 173.0f, 273.0f), Vector3d(228.0f, 273.0f, 273.0f), Vector3d(378.0f, 373.0f, 273.0f),
-		Material(DIFF, Vector3d(0, 0, 1)))));*/
-	scene.add( dynamic_cast<Object*>(new Mesh(Vector3d(), "objFile/dragon2.obj", Material(DIFF, Vector3d(0.9, 0.9, 0.9)))) );
+	///*scene.add(dynamic_cast<Object*>(new Triangle(Vector3d(278.0f, 173.0f, 273.0f), Vector3d(228.0f, 273.0f, 273.0f), Vector3d(378.0f, 373.0f, 273.0f),
+	//	Material(DIFF, Vector3d(0, 0, 1)))));*/
+	//scene.add( dynamic_cast<Object*>(new Mesh(Vector3d(), "objFile/dragon2.obj", Material(DIFF, Vector3d(0.9, 0.9, 0.9)))) );
+	// ground:
+	scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(0, -1000, 0), 1000, Material())));
+	// right:
+	scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(-1004, 0, 0), 1000, Material(DIFF, Vector3d(0.85, 0.4, 0.4)))));
+	// left:
+	scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(1004, 0, 0), 1000, Material(DIFF, Vector3d(0.4, 0.4, 0.85)))));
+	// back:
+	scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(0, 0, 1004), 1000, Material())));
+	// cell:
+	scene.add(dynamic_cast<Object*>(new Sphere(Vector3d(0, 110, 0), 100, Material(EMIT, Vector3d(1, 1, 1), Vector3d(2.2, 2.2, 2.2)))));
+	// object:
+	scene.add(dynamic_cast<Object*>(new Mesh(Vector3d(), "../obj/1.obj", Material(REFR, Vector3d(0.9, 0.9, 0.9)))));
+
+
 
 	Renderer renderer = Renderer(&scene, &camera);  // Create renderer with our scene and camera
 	renderer.render(samples);                       // Render image to pixel buffer

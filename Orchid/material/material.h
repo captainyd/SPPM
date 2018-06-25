@@ -35,7 +35,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "texture.h"
 namespace Orchid
 {
-	enum MaterialType { DIFF, SPEC, EMIT };
+	enum MaterialType { DIFF, SPEC, EMIT ,REFR};
 	class Material
 	{
 	private:
